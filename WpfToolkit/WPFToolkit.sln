@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ci", "ci", "{6D8DCDC8-C505-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfTest", "WpfTest\WpfTest.csproj", "{9456F323-C500-4BD1-86C7-9CD842320B16}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoCompleteTest", "AutoCompleteTest\AutoCompleteTest.csproj", "{593ABC23-357A-4AB2-BFBB-3C6452AD97DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,12 @@ Global
 		{9456F323-C500-4BD1-86C7-9CD842320B16}.Release with Code Analysis|Any CPU.Build.0 = Release|Any CPU
 		{9456F323-C500-4BD1-86C7-9CD842320B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9456F323-C500-4BD1-86C7-9CD842320B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{593ABC23-357A-4AB2-BFBB-3C6452AD97DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{593ABC23-357A-4AB2-BFBB-3C6452AD97DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{593ABC23-357A-4AB2-BFBB-3C6452AD97DC}.Release with Code Analysis|Any CPU.ActiveCfg = Release|Any CPU
+		{593ABC23-357A-4AB2-BFBB-3C6452AD97DC}.Release with Code Analysis|Any CPU.Build.0 = Release|Any CPU
+		{593ABC23-357A-4AB2-BFBB-3C6452AD97DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{593ABC23-357A-4AB2-BFBB-3C6452AD97DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

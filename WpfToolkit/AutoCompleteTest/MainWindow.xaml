@@ -1,0 +1,58 @@
+﻿<Window x:Class="AutoCompleteTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoCompleteTest"
+        xmlns:input="clr-namespace:System.Windows.Controls;assembly=DotNetProjects.Input.Toolkit"
+        mc:Ignorable="d"
+        Title="Auto Complete Test" 
+        Height="600" Width="400"
+        WindowStartupLocation="CenterScreen">
+
+  <Window.Resources>
+
+    <Style TargetType="TextBlock">
+      <Setter Property="VerticalAlignment" Value="Center" />
+      <Setter Property="Margin" Value="3"/>
+      <Setter Property="FontSize" Value="14"/>
+    </Style>
+
+  </Window.Resources>
+
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+
+    <TextBlock Grid.Row="0" Grid.Column="0" Text="Auto complete box"/>
+
+    <input:AutoCompleteBox Grid.Row="0" Grid.Column="1" Margin="3"
+                           x:Name="QueryBox"
+                           Text="{Binding PopulateText, Mode=OneWayToSource}"
+                           ItemsSource="{Binding WordDefList}"
+                           SelectedItem="{Binding CurrentWord, Mode=TwoWay}"
+                           Populating="QueryBox_Populating"
+                           DropDownClosing="QueryBox_DropDownClosing" >
+      <input:AutoCompleteBox.ItemTemplate>
+        <DataTemplate>
+          <TextBlock Text="{Binding Word}"/>
+        </DataTemplate>
+      </input:AutoCompleteBox.ItemTemplate>
+    </input:AutoCompleteBox>
+
+    <TextBlock Grid.Row="2" Grid.Column="0" Text="Current Item"/>
+    <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding CurrentWord}"/>
+    <TextBlock Grid.Row="3" Grid.Column="0" Text="Selected Item"/>
+    <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding SelectedWord}"/>
+
+  </Grid>
+
+</Window>
