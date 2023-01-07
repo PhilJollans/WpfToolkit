@@ -30,6 +30,7 @@
       <RowDefinition Height="*"/>
       <RowDefinition Height="Auto"/>
       <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
     </Grid.RowDefinitions>
 
     <TextBlock Grid.Row="0" Grid.Column="0" Text="Auto complete box"/>
@@ -48,10 +49,12 @@
       </input:AutoCompleteBox.ItemTemplate>
     </input:AutoCompleteBox>
 
-    <TextBlock Grid.Row="2" Grid.Column="0" Text="Current Item"/>
-    <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding CurrentWord}"/>
-    <TextBlock Grid.Row="3" Grid.Column="0" Text="Selected Item"/>
-    <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding SelectedWord}"/>
+    <TextBlock Grid.Row="2" Grid.Column="0" Text="Count"/>
+    <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding WordCount}"/>
+    <TextBlock Grid.Row="3" Grid.Column="0" Text="Current Item"/>
+    <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding CurrentWord}"/>
+    <TextBlock Grid.Row="4" Grid.Column="0" Text="Selected Item"/>
+    <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding SelectedWord}"/>
 
   </Grid>
 
