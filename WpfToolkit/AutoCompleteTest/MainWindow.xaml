@@ -27,6 +27,7 @@
     </Grid.ColumnDefinitions>
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
       <RowDefinition Height="*"/>
       <RowDefinition Height="Auto"/>
       <RowDefinition Height="Auto"/>
@@ -36,7 +37,6 @@
     <TextBlock Grid.Row="0" Grid.Column="0" Text="Auto complete box"/>
 
     <input:AutoCompleteBox Grid.Row="0" Grid.Column="1" Margin="3"
-                           x:Name="QueryBox"
                            Text="{Binding PopulateText, Mode=OneWayToSource}"
                            ItemsSource="{Binding WordDefList}"
                            SelectedItem="{Binding CurrentWord, Mode=TwoWay}"
@@ -49,12 +49,19 @@
       </input:AutoCompleteBox.ItemTemplate>
     </input:AutoCompleteBox>
 
-    <TextBlock Grid.Row="2" Grid.Column="0" Text="Count"/>
-    <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding WordCount}"/>
-    <TextBlock Grid.Row="3" Grid.Column="0" Text="Current Item"/>
-    <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding CurrentWord}"/>
-    <TextBlock Grid.Row="4" Grid.Column="0" Text="Selected Item"/>
-    <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding SelectedWord}"/>
+    <TextBlock Grid.Row="1" Grid.Column="0" Text="... with List of string"/>
+
+    <input:AutoCompleteBox Grid.Row="1" Grid.Column="1" Margin="3"
+                           Text="{Binding PopulateText, Mode=OneWayToSource}"
+                           ItemsSource="{Binding BasicWordList}"
+                           Populating="QueryBox_Populating" />
+
+    <TextBlock Grid.Row="3" Grid.Column="0" Text="Count"/>
+    <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding WordCount}"/>
+    <TextBlock Grid.Row="4" Grid.Column="0" Text="Current Item"/>
+    <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding CurrentWord}"/>
+    <TextBlock Grid.Row="5" Grid.Column="0" Text="Selected Item"/>
+    <TextBlock Grid.Row="5" Grid.Column="1" Text="{Binding SelectedWord}"/>
 
   </Grid>
 
