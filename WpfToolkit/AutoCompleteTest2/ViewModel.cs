@@ -10,6 +10,7 @@ namespace AutoCompleteTest2
   {
     public List<string> WordList1 { get; private set; }
     public List<string> WordList2 { get; private set; }
+    public List<string> WordList3 { get; private set; }
 
     public ViewModel()
     {
@@ -22,7 +23,13 @@ namespace AutoCompleteTest2
       WordList2 = new List<string> ();
       for ( int i = 0 ; i < 1000 ; i++ )
       {
-        WordList2.Add ( $"B{i}" );
+        WordList2.Add ( $"A{i}" );
+      }
+
+      WordList3 = new List<string> ();
+      for ( int i = 0 ; i < 100 ; i++ )
+      {
+        WordList3.Add ( $"A{i}" );
       }
     }
 
